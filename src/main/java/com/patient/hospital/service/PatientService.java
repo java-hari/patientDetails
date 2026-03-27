@@ -1,6 +1,7 @@
 package com.patient.hospital.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -34,6 +35,14 @@ public class PatientService {
 		List<PatientDetails> all = patientRepository.findAll();
 		
 		return all;
+	}
+
+
+	public PatientDetails getPatientById(Long id) {
+		
+		Optional<PatientDetails> byId = patientRepository.findById(id);
+		
+		return byId.get();
 	}
 	
 }
