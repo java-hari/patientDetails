@@ -5,7 +5,7 @@ FROM eclipse-temurin:17-jdk
 WORKDIR /hospital
 COPY . .
 RUN chmod +x mvnw || true 
-RUN ./mvn clean package -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 
 # ENV PORT=8080
