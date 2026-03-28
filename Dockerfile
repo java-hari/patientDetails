@@ -10,4 +10,4 @@ RUN ./mvnw clean package -DskipTests
 
 # ENV PORT=8080
 EXPOSE 8080
-CMD ["java","-jar","/target/hospital-0.0.1-SNAPSHOT.jar"]
+CMD ["java","-jar","/hospital/target/hospital-0.0.1-SNAPSHOT.jar"]
