@@ -4,7 +4,7 @@
 FROM eclipse-temurin:17-jdk
 WORKDIR /hospital
 COPY . .
-RUN chmod +x mvnw | true 
+RUN chmod +x mvnw || true 
 RUN ./mvn clean package -DskipTests
 
 
